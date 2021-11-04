@@ -91,7 +91,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log('Task 3! 🚀 ',reviews[5].feedback);
+// console.log('Task 3! 🚀 ',reviews[5].feedback);
 
 
 
@@ -103,7 +103,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays'
 
-console.log('Task 4! 🚀 ',reviews[7].feedback);
+// console.log('Task 4! 🚀 ',reviews[7].feedback);
 
 
 
@@ -126,7 +126,7 @@ function addReview(array, name, rating, feedback){
   array.push(newReview);
   return array;
 }
-console.log(addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
+// console.log(addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -139,11 +139,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
+function getReviewByIndex(array, index) {
   /*Your code here*/
+return `${reviews[index].name} gave the restaurant a ${reviews[index].rating} star review, and their feedback was: ${reviews[index].feedback}`
 }
 
-
+// console.log(getLastReview(reviews, 5));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -158,11 +159,13 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
+function getLastReview(array) {
   /*Your code here*/
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`;
+  
 } 
 
-
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
